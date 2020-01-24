@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TodoItem from '../../components/todo-item/TodoItem.js';
 import TodoAdd from '../../components/todo-add/TodoAdd.js';
-
+import './TodoList.scss'
 export default class TodoList extends Component {
     state = {
         todoList: []
@@ -65,9 +65,9 @@ export default class TodoList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="todo-list">
                 <TodoAdd addTodo={this.addTodo}/>
-                <ul>
+                <ul className="todo-list__container">
                     { this.renderTodoList()  }
                 </ul>
             </div>

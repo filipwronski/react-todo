@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './TodoAdd.scss'
 export default class TodoAdd extends Component {
     state = {
         value: '',
@@ -17,16 +17,19 @@ export default class TodoAdd extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="todo-add">
                 <input
                     value={this.state.value}
+                    className="todo-add__input"
                     onChange={this.handleChange}
+                    placeholder="Type todo"
                     type="text"
                 />
                 <button 
+                    className="todo-add__button"
                     onClick={this.handleAddTodo}
                 >
-                    Add todo
+                    Add
                 </button>
             </div>
         )
